@@ -1,4 +1,5 @@
 from ._Imports import requests, re
+import json
 
 header = {}
 
@@ -24,8 +25,4 @@ def getVideoStat(aid: int) -> dict:
     stat = requests.get(url, headers=header)
     if stat.status_code != 200: return {}
     stat = stat.content.decode('utf8')
-    data = re.compile('"data":{.+?}').findall(stat)
-    if data == []: return {}
-    data = data[0][7:]
-    data = eval(data)
-    return data
+    return json.loads(stat)["data"]
