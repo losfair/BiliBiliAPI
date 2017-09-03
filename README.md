@@ -1,3 +1,3 @@
 # BiliBiliAPI  
 提供API  
-&ensp&ensp&ensp&enspgetVideoStat(aid):获取视频数据  
+&#8194&#8194&#8194&#8194getVideoStat(aid):获取视频数据  
